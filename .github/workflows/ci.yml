@@ -34,7 +34,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
           ${{ runner.os }}-
-    - name: Install project
+    - name: Install package
       run: |
        pip install .
     - name: Check code style
@@ -43,9 +43,6 @@ jobs:
     - name: Check static analysis
       run: |
         make check-static-analysis
-    - name: Install package
-      run: |
-        pip install .
     - name: Run unit tests
       run: |
         make test

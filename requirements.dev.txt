@@ -8,3 +8,5 @@ twine
 wheel
 pytest
 apache-airflow
+pre-commit
+flake8

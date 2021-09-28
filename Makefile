@@ -100,8 +100,8 @@ check-types:
 # help: check-lint                     - run static analysis checks
 .PHONY: check-lint
 check-lint:
-	@pylint --rcfile=.pylintrc datapipeline_tests ./tests setup.py ./examples
-
+	@flake8
+# @pylint --rcfile=.pylintrc datapipeline_tests ./tests setup.py ./examples
 
 # help: check-static-analysis          - check code style compliance
 .PHONY: check-static-analysis
