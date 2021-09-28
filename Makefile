@@ -39,20 +39,20 @@ scrub:
 # help: test                           - run tests
 .PHONY: test
 test:
-	@python -m unittest discover -s tests
+	@python -m pytest tests/
 
 
 # help: test-verbose                   - run tests [verbosely]
 .PHONY: test-verbose
 test-verbose:
-	@python -m unittest discover -s tests -v
+	@python -m pytest  -v -s --setup-show tests/
 
 
 # help: coverage                       - perform test coverage checks
 .PHONY: coverage
 coverage:
 	@coverage erase
-	@PYTHONPATH=src coverage run -m unittest discover -s tests -v
+	@PYTHONPATH=src coverage run -m pytest --no-header  -v -s tests/
 	@coverage html
 	@coverage report
 

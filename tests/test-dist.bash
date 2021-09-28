@@ -32,7 +32,7 @@ pip install $RELEASE_ARCHIVE
 
 echo "Running tests"
 cd ../tests
-python -m unittest discover -s .
+python -m pytest -v -s .
 
 echo "Exiting test virtual environment"
 deactivate
