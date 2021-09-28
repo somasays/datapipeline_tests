@@ -34,6 +34,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
           ${{ runner.os }}-
+    - name: Install project
+      run: |
+       source venv/bin/activate
     - name: Check code style
       run: |
         make check-style
