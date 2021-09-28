@@ -10,7 +10,3 @@ class VersionTestCase(unittest.TestCase):
         """check datapipeline_tests exposes a version attribute"""
         self.assertTrue(hasattr(datapipeline_tests, "__version__"))
         self.assertIsInstance(datapipeline_tests.__version__, str)
-
-
-if __name__ == "__main__":
-    unittest.main()

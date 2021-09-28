@@ -39,13 +39,13 @@ scrub:
 # help: test                           - run tests
 .PHONY: test
 test:
-	@python -m pytest tests/
+	@python -m pytest --no-header tests/
 
 
 # help: test-verbose                   - run tests [verbosely]
 .PHONY: test-verbose
 test-verbose:
-	@python -m pytest  -v -s --setup-show tests/
+	@python -m pytest --no-header -v -s tests/
 
 
 # help: coverage                       - perform test coverage checks

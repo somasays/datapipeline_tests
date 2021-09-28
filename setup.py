@@ -52,8 +52,12 @@ if __name__ == '__main__':
         maintainer_email='soma.sekar@hellofresh.com',
         install_requires=requirements,
         keywords=['datapipeline_tests'],
-        package_dir={'': 'src'},
-        packages=find_packages('src'),
+        package_dir={'': 'src',
+                     'dags': 'dags'},
+        packages=(
+            find_packages('src') +
+            find_packages(where='./dags')
+        ),
         zip_safe=False,
         classifiers=['Development Status :: 3 - Alpha',
                      'Intended Audience :: Developers',

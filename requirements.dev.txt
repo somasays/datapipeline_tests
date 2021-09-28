@@ -7,3 +7,4 @@ sphinx
 twine
 wheel
 pytest
+apache-airflow
